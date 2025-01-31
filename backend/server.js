@@ -16,6 +16,10 @@ const pool = new Pool({
   port: 5432,
 });
 
+app.get("/", (req, res) => {
+    res.send("Welcome to the Task Manager API!");
+  });
+
 // Create a Task
 app.post("/tasks", async (req, res) => {
   const { task } = req.body;
